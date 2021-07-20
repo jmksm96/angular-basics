@@ -1,14 +1,13 @@
 <h1>Title</h1>
 
-<button (click)="toggle = !toggle">Toggle</button>
-
-<!--<div [ngSwitch]="toggle">-->
-<!--    <p *ngSwitchCase="true" class="blue">lorem blue</p>-->
-<!--    <p *ngSwitchCase="false" class="red">lorem red</p>-->
-<!--</div>-->
-
-
-<div  [ngSwitch]="toggle">
-<div *ngSwitchCase="true" class="square-red"></div>
-<div *ngSwitchCase="false" class="square-blue"></div>
-</div>
+<ul>
+    <li *ngFor="let post of obj">
+        <p><b>Title: </b>{{post.title}} <b>author: </b>{{post.author}}</p>
+        <ul>
+            <li *ngFor="let comments of post.comments">
+                <p>{{comments.name}}</p>
+                <p>{{comments.text}}</p>
+            </li>
+        </ul>
+    </li>
+</ul>
