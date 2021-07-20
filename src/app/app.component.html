@@ -1,0 +1,6 @@
+<app-post></app-post>
+<p>{{title}}</p>
+<img [src]="img" alt="">
+<input type="text" (keyup.enter)="onInput($event)" (blur)="onBlur($event)">
+<p><strong>{{inputValue}}</strong></p>
+<router-outlet></router-outlet>
