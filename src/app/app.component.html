@@ -1,17 +1,14 @@
 <h1>Title</h1>
 
-<button (click) = "backgroundToggle = !backgroundToggle">Toggle</button>
+<button (click)="toggle = !toggle">Toggle</button>
+
+<!--<div [ngSwitch]="toggle">-->
+<!--    <p *ngSwitchCase="true" class="blue">lorem blue</p>-->
+<!--    <p *ngSwitchCase="false" class="red">lorem red</p>-->
+<!--</div>-->
 
 
-<div [ngStyle]="{
-width: '200px',
-height: '200px',
-borderRadius: '5px',
-border: '1px solid black',
-display: 'flex',
-alignItems: 'center',
-justifyContent: 'center',
-background: backgroundToggle ? 'red': 'blue'
-}">
-
+<div  [ngSwitch]="toggle">
+<div *ngSwitchCase="true" class="square-red"></div>
+<div *ngSwitchCase="false" class="square-blue"></div>
 </div>
