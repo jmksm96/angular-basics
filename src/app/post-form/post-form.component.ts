@@ -12,7 +12,7 @@ export class PostFormComponent implements OnInit {
     @ViewChild('titleInput') inputRef!: ElementRef
     @ViewChild('textInput') inputRefText!: ElementRef
 
-    titile = ''
+    title = ''
     text = ''
 
     constructor() {
@@ -22,14 +22,14 @@ export class PostFormComponent implements OnInit {
     }
 
     addPost() {
-        if (this.titile.trim() && this.text.trim()) {
+        if (this.title.trim() && this.text.trim()) {
             const post: Post = {
-                title: this.titile,
+                title: this.title,
                 text: this.text
             }
             this.onAdd.emit(post)
             console.log('new Post', post)
-            this.text = this.titile = ''
+            this.text = this.title = ''
         }
     }
 
