@@ -1,31 +1,6 @@
 <div class="container">
-    <h1>Angular Components</h1>
-
-    <app-post-form
-            (onAdd)="updatePosts($event)"></app-post-form>
-
-    <hr/>
-
-    <app-post
-            *ngFor="let p of posts"
-            [post]="p"
-            (onRemove)="removePost($event)"
-    >
-        <small *ngIf="p.text.length > 10; else short"> Post long</small>
-        <small *ngIf="p.title.length > 10; else shortText">Big title</small>
-        <ng-template #short>
-            <small>
-                Post Small
-            </small>
-        </ng-template>
-        <ng-template #shortText>
-            <small>
-                Small title
-            </small>
-        </ng-template>
-    </app-post>
-
-
+    <h1 appStyle [color]="'green'">Angular Derectivies</h1>
+    <p appStyle>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis error esse expedita facilis impedit libero
+        modi nesciunt, sint temporibus voluptates! At est natus, quae quasi quos ratione. Cumque, deserunt,
+        dignissimos!</p>
 </div>
-
-
