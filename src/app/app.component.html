@@ -1,13 +1,16 @@
-<h1>Title</h1>
+<div class="container">
+  <h1>Angular Components</h1>
 
-<ul>
-    <li *ngFor="let post of obj">
-        <p><b>Title: </b>{{post.title}} <b>author: </b>{{post.author}}</p>
-        <ul>
-            <li *ngFor="let comments of post.comments">
-                <p>{{comments.name}}</p>
-                <p>{{comments.text}}</p>
-            </li>
-        </ul>
-    </li>
-</ul>
+  <app-post-form></app-post-form>
+
+  <hr />
+
+  <app-post
+  *ngFor="let p of posts"
+  [post]="p"
+  ></app-post>
+
+
+</div>
+
+
