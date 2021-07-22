@@ -5,7 +5,6 @@ export interface Post {
     text: string
     id?: number
 }
-
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -14,8 +13,8 @@ export interface Post {
 export class AppComponent {
 
     posts: Post[] = [
-        {title: 'Title 1', text: 'text1', id: 1},
-        {title: 'Title 2', text: 'text2', id: 2}
+        { title: 'Title 1', text: 'text1', id: 1 },
+        { title: 'Title 2', text: 'text2', id: 2 }
     ]
 
     updatePosts(post: Post) {
