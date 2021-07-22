@@ -7,4 +7,18 @@
         error esse expedita facilis impedit libero
         modi nesciunt, sint temporibus voluptates! At est natus, quae quasi quos ratione. Cumque, deserunt,
         dignissimos!</p>
+    <button class = "btn" (click)="isVisible = !isVisible">Toggle</button>
+<!--    <div class="wrap" *ngIf="isVisible">-->
+<!--        <p>-->
+<!--            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque et hic impedit ipsa neque numquam-->
+<!--            officiis tempora temporibus totam.-->
+<!--        </p>-->
+<!--    </div>-->
+
+    <div class="wrap" *appIfNot = "!isVisible">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque et hic impedit ipsa neque numquam
+            officiis tempora temporibus totam.
+        </p>
+    </div>
 </div>

@@ -13,6 +13,7 @@ export class StyleDirective implements AfterViewInit {
     @HostBinding('style.color') elColor = null
 
 
+
     constructor(private el: ElementRef, private r: Renderer2) {
 
     }
