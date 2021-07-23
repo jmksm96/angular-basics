@@ -1,14 +1,6 @@
 <div class="container">
-    <input type="text" [(ngModel)]="search">
-    <button class="btn" (click)="searchField = 'title'">Title</button>
-    <button class="btn" (click)="searchField = 'text'">Text</button>
-    <hr>
-    <button class="btn" (click)="addPost()">Add new post</button>
+    <h1>Async Pipe</h1>
+    <p> Wait for it... {{p | async}}</p>
 
-    <div
-            *ngFor="let post of posts | filter:search: searchField"
-            class="card">
-        <h1>{{post.title}}</h1>
-        <h1>{{post.text}}</h1>
-    </div>
+    <p>Date: {{date$ | async | date: 'HH:mm:SS:yyyy'}}</p>
 </div>
