@@ -1,10 +1,5 @@
-import {Component} from '@angular/core';
+import {Component} from '@angular/core'
 
-export interface Post {
-    title: string
-    text: string
-    id?: number
-}
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -12,5 +7,6 @@ export interface Post {
 })
 export class AppComponent {
 
-    isVisible = true
+    e: number = Math.E
+
 }
