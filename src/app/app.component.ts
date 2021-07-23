@@ -11,8 +11,15 @@ export interface Post {
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    search = ''.toLowerCase()
+    search = ''
     searchField = 'title'
+
+    addPost(): void {
+        this.posts.push({
+            title: 'New title',
+            text: 'new text'
+        })
+    }
 
     posts: Post [] = [
         {title: 'Angular', text: 'The best framework'},
